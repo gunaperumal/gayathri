@@ -38,10 +38,10 @@ Resources:
             RouteSettings:
               ThrottlingBurstLimit: 600
   
-  guna:
+  firstlambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: "guna_p"
+      FunctionName: "first_lambda"
       InlineCode: |
           exports.lambdaHandler = async (event, context) => {
             let response;
