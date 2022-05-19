@@ -9,6 +9,8 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: "follow_lambda"
+      CodeUri: hello-world/
       InlineCode: |
           exports.lambdaHandler = async (event, context) => {
             let response;
@@ -16,7 +18,7 @@ Resources:
                 response = {
                     'statusCode': 200,
                     'body': JSON.stringify({
-                        message: 'hello world'
+                        message: 'hello world 1'
                     })
                 }
             } catch (err) {
@@ -41,7 +43,7 @@ Resources:
   firstlambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: "first_lambda"
+      FunctionName: "flirt_lambda"
       InlineCode: |
           exports.lambdaHandler = async (event, context) => {
             let response;
